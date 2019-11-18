@@ -22,7 +22,7 @@ while True:
             break
         else:
             yy = int(y)
-            print(yy, "Interger detected.")
+            print(yy, "Integer detected.")
             break
     except ValueError:
         y = input("Please enter a valid number! You dumdum. Try again:")
