@@ -5,27 +5,27 @@ while True:
     try:
         if "." in x :
             xx = float(x)
-            print(xx, "Yes, user input is a float number.")
+            print(xx, "Float number detected.")
             break
         else:
             xx = int(x)
-            print(xx, "Yes, input string is an Integer.")
+            print(xx, "Integer detected.")
             break
     except ValueError:
-        x = input("Please enter a valid number! You dumdum.Try again:")
+        x = input("Please enter a valid number! You dumdum. Try again:")
 y = input("Enter second value:")
 while True:
     try:
         if "." in y :
             yy = float(y)
-            print(yy, "Yes, user input is a float number.")
+            print(yy, "Float number detected.")
             break
         else:
             yy = int(y)
-            print(yy, "Yes, input string is an Integer.")
+            print(yy, "Interger detected.")
             break
     except ValueError:
-        y = input("Please enter a valid number! You dumdum.Try again:")
+        y = input("Please enter a valid number! You dumdum. Try again:")
 result = (xx + yy)
 result_return = ("The sum is: {}.")
 print(result_return.format(result))
