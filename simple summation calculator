@@ -1,31 +1,24 @@
 print("Welcome to the simple summation calculator!")
 print("Please enter your values below")
+def input_checker(value):
+    while True:
+        try:
+            if "." in value :
+                negative_result = float(value)
+                print(value, "Float number detected.")
+                return float(value)                     
+                break
+            else:
+                negative_result = int(value)
+                print(value, "Integer detected.")
+                return int(value)
+                break
+        except ValueError:
+            value = input("Please enter a valid number! You dumdum. Try again:")
+
 x = input("Enter first value:")
-while True:
-    try:
-        if "." in x :
-            xx = float(x)
-            print(xx, "Float number detected.")
-            break
-        else:
-            xx = int(x)
-            print(xx, "Integer detected.")
-            break
-    except ValueError:
-        x = input("Please enter a valid number! You dumdum. Try again:")
+input_checker(x)
 y = input("Enter second value:")
-while True:
-    try:
-        if "." in y :
-            yy = float(y)
-            print(yy, "Float number detected.")
-            break
-        else:
-            yy = int(y)
-            print(yy, "Integer detected.")
-            break
-    except ValueError:
-        y = input("Please enter a valid number! You dumdum. Try again:")
-result = (xx + yy)
+input_checker(y)
+result = (input_checker(x) + input_checker(y))
 result_return = ("The sum is: {}.")
-print(result_return.format(result))
