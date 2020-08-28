@@ -1,0 +1,10 @@
+print ("Welcome to the automatic pay calculator")
+h = input ("Please input your hours of work:")
+while True:
+  try:
+      hrs = float(h)
+      print ("Number of hours input:")
+      print(hrs)
+      break
+  except ValueError:
+      h = input("Please enter a valid number:")
