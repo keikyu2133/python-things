@@ -3,18 +3,26 @@ h = input ("Please input your hours of work:")
 while True:
   try:
       hrs = float(h)
-      print ("Number of hours input:")
-      print(hrs)
+      print ("Number of hours input:", hrs)
       break
   except ValueError:
       h = input("Please enter a valid number:")
 
+r = input ("Please input your hourly rate")
+while True:
+  try:
+      rate = float(r)
+      print ("Hourly rate input:", r)
+      break
+  except ValueError:
+      r = input("Please enter a valid number:")
+
 if hrs > 160.0:
-    base_pay = hrs * 10
-    overtime_pay = (hrs - 160.0) * 10 * 1.5
+    base_pay = hrs * rate
+    overtime_pay = (hrs - 160.0) * rate * 1.5
     gross_pay = overtime_pay + base_pay
 else:
-    gross_pay = hrs * 10
+    gross_pay = hrs * rate
     
 print ("Your gross pay is", gross_pay)
 
