@@ -8,3 +8,23 @@ while True:
       break
   except ValueError:
       h = input("Please enter a valid number:")
+
+if hrs > 160.0:
+    base_pay = hrs * 10
+    overtime_pay = (hrs - 160.0) * 10 * 1.5
+    gross_pay = overtime_pay + base_pay
+else:
+    gross_pay = hrs * 10
+    
+print ("Your gross pay is", gross_pay)
+
+if gross_pay > 0 and gross_pay <= 1000:
+    tax = gross_pay / 10
+elif gross_pay > 1000 and gross_pay <= 1500:
+    tax = (1000 / 10) + ((gross_pay - 1000) / 100 * 20)
+else:
+    tax = (1000 / 10) + (500 / 5) + ((gross_pay - 1500) / 100 * 30)
+
+print ("Your tax is", tax)
+net_pay = gross_pay - tax
+print ("Your net pay is", net_pay)
