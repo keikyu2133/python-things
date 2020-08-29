@@ -8,7 +8,7 @@ while True:
   except ValueError:
       h = input("Please enter a valid number:")
 
-r = input ("Please input your hourly rate")
+r = input ("Please input your hourly rate:")
 while True:
   try:
       rate = float(r)
