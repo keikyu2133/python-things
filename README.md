@@ -5,4 +5,4 @@ Some experimental python scripts
 Random 
 
 ## automatic pay calculator
-Calculating pay with input rate and work hours with compounded tax
+Calculating pay with compounded tax using input rate and work hours 
